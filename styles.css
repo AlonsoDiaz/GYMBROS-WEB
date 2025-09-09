@@ -280,7 +280,7 @@ body {
 /* ---------------- CONTACTO (sección index) ---------------- */
 .contacto {
     min-height: 60vh;
-    background-image: url('img/compañero.webp');
+    background-image: url('img/compañero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -345,7 +345,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('img/compañero.webp');
+    background-image: url('img/compañero.png');
     background-size: cover;
     background-position: center;
     position: relative;
