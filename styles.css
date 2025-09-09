@@ -1,14 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@700&display=swap');
 
-
-
+/* Reset */
 body {
     margin: 0;
     padding: 0;
-    background: #000; /* Fondo negro por defecto */
+    background: #111;
+    font-family: 'HK Grotesk', sans-serif;
 }
 
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 16px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+/* contenedor interno para centrar el contenido */
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    color: #fffb04;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'HK Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #fffb04;
+}
+
+/* Ajuste para que el contenido no quede debajo de la navbar */
+.hero,
+.sobre-nosotros,
+.que-ofrecemos,
+.contacto,
+.contacto-section,
+.registro-section {
+    padding-top: 80px;
+}
+
+/* ---------------- HERO ---------------- */
 .hero {
     min-height: 100vh;
     position: relative;
@@ -48,9 +113,8 @@ body {
     color: #fff;
     font-size: 120px;
     letter-spacing: 2px;
-    margin-bottom: 40px; /* Espacio entre texto y botón */
+    margin-bottom: 40px;
     text-align: center;
-    z-index: 2;
 }
 
 .btn-unete {
@@ -67,7 +131,6 @@ body {
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     letter-spacing: 1px;
     transition: background 0.2s, color 0.2s;
-    z-index: 2;
     position: relative;
 }
 
@@ -76,16 +139,16 @@ body {
     color: #ffffff;
 }
 
+/* ---------------- SOBRE NOSOTROS ---------------- */
 .sobre-nosotros {
     background: #111;
     color: #fffb04;
     min-height: 100vh;
     display: flex;
-    align-items: flex-start; /* Alinea arriba */
-    justify-content: flex-start; /* Alinea a la izquierda */
+    align-items: flex-start;
+    justify-content: flex-start;
     position: relative;
-    padding-top: 120px; /* Espacio desde arriba */
-    padding-left: 8vw; /* Espacio desde la izquierda */
+    padding-left: 8vw;
 }
 
 .sobre-nosotros h2 {
@@ -104,13 +167,9 @@ body {
     padding: 24px;
     border-radius: 16px;
     margin-top: 32px;
-    width: 420px;           /* Más ancha */
-    /* height: 260px; */    /* Elimina la altura fija */
+    width: 420px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    text-align: left;
     flex-direction: column;
     line-height: 1.6;
 }
@@ -119,9 +178,6 @@ body {
     margin: 0 0 16px 0;
 }
 
-.sobre-caja p:last-child {
-    margin-bottom: 0;
-}
 .sobre-contenido {
     display: flex;
     align-items: flex-start;
@@ -134,7 +190,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    margin-left: 400px; /* Mueve las imágenes más a la derecha */
+    margin-left: 400px;
     align-items: flex-start;
     margin-top: 120px;
 }
@@ -143,9 +199,8 @@ body {
     background: #222;
     border-radius: 16px;
     box-shadow: 0 4px 32px rgba(0,0,0,0.15);
-    padding: 0;
-    width: 350px;      /* Más anchas */
-    height: 520px;     /* Más largas */
+    width: 350px;
+    height: 520px;
     overflow: hidden;
     display: flex;
     align-items: stretch;
@@ -153,7 +208,7 @@ body {
 }
 
 .card-img:nth-child(2) {
-    margin-top: 120px; /* Segunda card más abajo */
+    margin-top: 120px;
 }
 
 .card-img img {
@@ -161,18 +216,13 @@ body {
     height: 100%;
     border-radius: 16px;
     object-fit: cover;
-    display: block;
 }
 
+/* ---------------- QUE OFRECEMOS ---------------- */
 .que-ofrecemos {
     background: #111;
     padding: 80px 0;
     color: #fffb04;
-}
-
-.que-ofrecemos-container {
-    max-width: 1200px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -193,7 +243,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 24px;
 }
 
 .ofrecemos-card {
@@ -201,9 +250,6 @@ body {
     height: 340px;
     position: relative;
     overflow: hidden;
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,7 +260,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
-    display: block;
 }
 
 .ofrecemos-card-text {
@@ -230,12 +275,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    z-index: 2;
 }
 
+/* ---------------- CONTACTO (sección index) ---------------- */
 .contacto {
     min-height: 60vh;
-    background-image: url('img/compañero.webp'); /* Cambia la ruta por tu imagen */
+    background-image: url('img/compañero.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -294,32 +339,13 @@ body {
     color: #fff;
 }
 
-.footer {
-    background: #181818;
-    color: #fff;
-    text-align: center;
-    padding: 24px 0;
-    font-family: 'HK Grotesk', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@700&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    background: #111;
-    font-family: 'HK Grotesk', sans-serif;
-}
-
+/* ---------------- CONTACTO (página contacto.html) ---------------- */
 .contacto-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('img/compañero.webp'); /* Usa la misma imagen que en index */
+    background-image: url('img/compañero.webp');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -361,7 +387,6 @@ body {
     font-size: 1.2rem;
     margin-bottom: 32px;
     line-height: 1.6;
-    font-family: 'HK Grotesk', sans-serif;
 }
 
 .contacto-form {
@@ -379,7 +404,6 @@ body {
     background: #222;
     color: #fff;
     resize: none;
-    font-family: 'HK Grotesk', sans-serif;
 }
 
 .contacto-form textarea {
@@ -396,10 +420,34 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
-    font-family: 'HK Grotesk', sans-serif;
 }
 
 .contacto-form button:hover {
     background: #222;
     color: #fff;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    background: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 16px;
+    }
+    .navbar {
+        padding: 12px 20px;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-links a {
+        font-size: 1rem;
+    }
 }
